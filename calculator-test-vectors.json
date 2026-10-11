@@ -1,0 +1,87 @@
+{
+  "name": "Utilivo reference calculator test vectors",
+  "version": "1.0",
+  "publishedAt": "2026-10-11T21:21:14Z",
+  "license": "CC0-1.0",
+  "url": "https://utilivo.tech/tools/calculators",
+  "note": "Reproducible mathematical reference cases reflecting selected tool formulas; not a browser end-to-end test or jurisdiction-specific tax advice.",
+  "cases": [
+    {
+      "id": "margin-01",
+      "method": "margin",
+      "inputs": {
+        "cost": 80,
+        "sellingPrice": 100
+      },
+      "expected": {
+        "profit": 20,
+        "marginPct": 20,
+        "markupPct": 25
+      }
+    },
+    {
+      "id": "markup-01",
+      "method": "markup",
+      "inputs": {
+        "cost": 80,
+        "markupPct": 25
+      },
+      "expected": {
+        "sellingPrice": 100,
+        "profit": 20,
+        "marginPct": 20
+      }
+    },
+    {
+      "id": "discount-01",
+      "method": "discount",
+      "inputs": {
+        "original": 200,
+        "ratePct": 15
+      },
+      "expected": {
+        "saved": 30,
+        "salePrice": 170
+      }
+    },
+    {
+      "id": "vat-01",
+      "method": "vat",
+      "inputs": {
+        "net": 200,
+        "ratePct": 15
+      },
+      "expected": {
+        "taxAmount": 30,
+        "totalWithTax": 230
+      }
+    },
+    {
+      "id": "breakeven-01",
+      "method": "breakeven",
+      "inputs": {
+        "fixedCost": 1200,
+        "pricePerUnit": 50,
+        "variableCostPerUnit": 20
+      },
+      "expected": {
+        "units": 40,
+        "revenue": 2000,
+        "contributionPerUnit": 30
+      }
+    },
+    {
+      "id": "roi-01",
+      "method": "roi",
+      "inputs": {
+        "investment": 1000,
+        "finalValue": 1250
+      },
+      "expected": {
+        "gain": 250,
+        "roiPct": 25,
+        "multiple": 1.25
+      }
+    }
+  ]
+}
